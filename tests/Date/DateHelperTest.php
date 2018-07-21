@@ -194,7 +194,7 @@ class DateHelperTest extends TestCase
      */
     public function testBuildDateTimeFromStringPredictedAsMonthDateFormat()
     {
-        $expected = date('Y') . '-03-' . date('d') . ' 00:00:00.000000';
+        $expected = date('Y') . '-03-01 00:00:00.000000';
 
         $fromString = '3';
         /**
@@ -211,7 +211,7 @@ class DateHelperTest extends TestCase
      */
     public function testBuildDateTimeFromStringDefaultToDate1MonthInFuturePredictedDateFormat()
     {
-        $tmpDateTime = new \DateTime(date('Y') . '-03-' . date('d') . ' 00:00:00.000000');
+        $tmpDateTime = new \DateTime(date('Y') . '-03-01 00:00:00.000000');
         $tmpDateTime->add(new \DateInterval('P1M'));
         $expected = $tmpDateTime->format($this->format);
 
@@ -230,7 +230,7 @@ class DateHelperTest extends TestCase
      */
     public function testBuildDateTimeFromStringDefaultToDate1MonthInFutureOverNewYearPredictedDateFormat()
     {
-        $tmpDateTime = new \DateTime(date('Y') . '-12-' . date('d') . ' 00:00:00.000000');
+        $tmpDateTime = new \DateTime(date('Y') . '-12-01 00:00:00.000000');
         $tmpDateTime->add(new \DateInterval('P1M'));
         $expected = $tmpDateTime->format($this->format);
 
@@ -249,7 +249,7 @@ class DateHelperTest extends TestCase
      */
     public function testBuildDateTimeFromStringWithToStringPredictedDateFormat()
     {
-        $expected = date('Y') . '-05-' . date('d') . ' 00:00:00.000000';
+        $expected = date('Y') . '-05-01 00:00:00.000000';
 
         $fromString = '3';
         $toString = '5';
