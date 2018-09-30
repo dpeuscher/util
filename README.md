@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/dpeuscher/util.svg?branch=master)](https://travis-ci.org/dpeuscher/util) [![codecov](https://codecov.io/gh/dpeuscher/util/branch/master/graph/badge.svg)](https://codecov.io/gh/dpeuscher/util)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdpeuscher%2Futil.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fdpeuscher%2Futil?ref=badge_shield)
-
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/dpeuscher/util/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/dpeuscher/util/?branch=master)
 # util
 Code that extends existing basic PHP-functionality
 
