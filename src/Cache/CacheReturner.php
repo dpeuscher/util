@@ -37,8 +37,8 @@ class CacheReturner
     public function return(string $key, callable $callback)
     {
         try {
-            if ($this->cache->has($key)) {
-                return $this->cache->get($key);
+            if ($this->cache->has(hash('sha256', $key))) {
+                return $this->cache->get(hash('sha256', $key));
             }
         } catch (InvalidArgumentException $e) {
             $this->logger->warning('Used invalid key as cache key "' . $key . '" - handled as miss');
@@ -47,7 +47,7 @@ class CacheReturner
         /** @noinspection UnSafeIsSetOverArrayInspection */
         if (!isset($e)) {
             /** @noinspection PhpUnhandledExceptionInspection */
-            $this->cache->set($key, $result);
+            $this->cache->set(hash('sha256', $key), $result);
         }
         return $result;
     }

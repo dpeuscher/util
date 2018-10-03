@@ -10,6 +10,7 @@ use Psr\SimpleCache\InvalidArgumentException;
 
 /**
  * Class CacheReturnerTest
+ *
  * @covers \Dpeuscher\Util\Cache\CacheReturner
  */
 class CacheReturnerTest extends TestCase
@@ -116,7 +117,8 @@ class CacheReturnerTest extends TestCase
              */
             private function validateKey($key): void
             {
-                if (preg_match('/[\x00-\x1F]/', $key)) {
+                if ($key === 'beead77994cf573341ec17b58bbf7eb34d2711c993c1d976b128b3188dc1829a' ||
+                    preg_match('/[\x00-\x1F]/', $key)) {
                     throw new class extends \RuntimeException implements InvalidArgumentException
                     {
                     };
